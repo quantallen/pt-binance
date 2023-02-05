@@ -15,15 +15,15 @@ async def main():
     from config import Pair_Trading_Config
     from credentials import binance_key, binance_secret
     
-    binance_client = await AsyncClient.create(api_key=binance_key\
-                                                ,api_secret=binance_secret)
+    # binance_client = await AsyncClient.create(api_key=binance_key\
+    #                                             ,api_secret=binance_secret)
     
-    binance_client2 = await AsyncClient.create(api_key=binance_key\
-                                                ,api_secret=binance_secret)
+    # binance_client2 = await AsyncClient.create(api_key=binance_key\
+    #                                             ,api_secret=binance_secret)
     
-    #binance_client = await AsyncClient.create()
+    binance_client = await AsyncClient.create()
 
-    #binance_client2 = await AsyncClient.create()
+    binance_client2 = await AsyncClient.create()
     configs = Pair_Trading_Config()
     spreader = Spreader(binance_client, binance_client2, configs)
     await spreader.execute()

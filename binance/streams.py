@@ -827,7 +827,7 @@ class BinanceSocketManager:
         :type depth: str
         :param futures_type: use USD-M or COIN-M futures default USD-M
         """
-        return self._get_futures_socket(symbol.lower() + '@depth' + str(depth), futures_type=futures_type)
+        return self._get_futures_socket(symbol.lower() + '@depth' + str(depth) + '@0ms', futures_type=futures_type)
 
     def symbol_mark_price_socket(self, symbol: str, fast: bool = True, futures_type: FuturesType = FuturesType.USD_M):
         """Start a websocket for a symbol's futures mark price

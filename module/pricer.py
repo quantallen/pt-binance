@@ -6,13 +6,9 @@ import logging
 import sys
 import random
 import string
-from simulator.Order import Order
-import telegram
 import hashlib
-
-sys.path.append('./trading-simulator/module')
 from prettytable import PrettyTable
-
+import telegram
 # Price precision for submitting orders
 
 def pretty_table(dct):
